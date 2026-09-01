@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ស្រែមាស ចំការលើ | ការិយាល័យជំនួយកសិកម្ម និងផ្គត់ផ្គង់ផលិតផល</title>
+    <meta name="description" content="សេវាកម្មកសិកម្ម, ថ្នាំជំនួយ, ថ្នាំសត្វល្អិត, ថ្នាំជំងឺ, ជីគ្រាប់ និងប្រឹក្សាដំណាំដោយអ្នកជំនាញ" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+   
+    <style>
+        :root {
+            --green-950: #022c22;
+            --green-900: #064e3b;
+            --green-800: #0f766e;
+            --green-700: #0f766e;
+            --green-600: #059669;
+            --green-500: #10b981;
+            --amber-400: #fbbf24;
+            --amber-500: #f59e0b;
+            --amber-600: #d97706;
+            --slate-900: #0f172a;
+            --slate-800: #1e293b;
+            --slate-700: #334155;
+            --slate-400: #94a3b8;
+            --white: #ffffff;
+            --bg-soft: #f3fdf8;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Kantumruy Pro', 'Inter', sans-serif;
+            background: linear-gradient(180deg, #f8fff9 0%, #f5f7f3 100%);
+            color: #0f172a;
+        }
+
+        .shadow-soft {
+            box-shadow: 0 20px 45px rgba(15, 118, 110, 0.08);
+        }
+
+        .float-anim {
+            animation: bounce-slow 3s infinite ease-in-out;
+        }
+
+        @keyframes bounce-slow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .hero-grid {
+            background-image:
+                radial-gradient(circle at top left, rgba(255,255,255,0.18), transparent 20%),
+                radial-gradient(circle at bottom right, rgba(251,191,36,0.18), transparent 20%),
+                linear-gradient(135deg, rgba(6,78,59,0.96), rgba(5,150,105,0.92));
+        }
+
+        .section-shell {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+    <div class="bg-amber-500 text-emerald-950 text-xs sm:text-sm font-bold py-2 px-4 text-center tracking-wide">
+        🌾 <span data-translate="top_promo">ប្រឹក្សាបច្ចេកទេសដំណាំដោយឥតគិតថ្លៃ! ទំនាក់ទំនងបន្ទាន់៖ 097 433 7888</span>
+    </div>
+
+    <header class="sticky top-0 z-50 border-b border-emerald-800/20 bg-emerald-950/95 backdrop-blur-md">
+        <div class="section-shell flex items-center justify-between py-4">
+            <div class="flex items-center gap-3">
+                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-400 text-2xl shadow-lg shadow-amber-300/40">🌿</div>
+                <div>
+                    <h1 class="text-lg sm:text-xl font-extrabold text-white" data-translate="brand_name">ស្រែមាស ចំការលើ</h1>
+                    <p class="text-[10px] sm:text-xs text-emerald-100/90" data-translate="brand_sub">Agricultural Expert & Supplier</p>
+                </div>
+            </div>
+
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-emerald-100">
+                <a href="#about" class="hover:text-white transition">ព័ត៌មាន</a>
+                <a href="#products" class="hover:text-white transition">ផលិតផល</a>
+                <a href="#why-us" class="hover:text-white transition">អត្ថប្រយង</a>
+                <a href="#reviews" class="hover:text-white transition">មតិយោបល់</a>
+                <a href="#contact" class="hover:text-white transition">ទំនាក់ទំនង</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <div class="hidden sm:flex items-center gap-1 rounded-full border border-emerald-600/50 bg-emerald-900/40 p-1">
+                    <button id="btn-km" onclick="switchLanguage('km')" class="px-3 py-2 text-sm rounded-full bg-white text-emerald-900 font-semibold shadow-sm transition">ខ្មែរ</button>
+                    <button id="btn-en" onclick="switchLanguage('en')" class="px-3 py-2 text-sm rounded-full text-emerald-100 hover:text-white transition">English</button>
+                </div>
+                <a href="tel:0974337888" class="hidden md:inline-flex items-center justify-center rounded-full bg-amber-500 px-4 py-2.5 text-sm font-bold text-emerald-950 shadow-lg shadow-amber-600/30 transition hover:bg-amber-400">
+                    📞 097 433 7888
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-grid text-white">
+            <div class="section-shell grid items-center gap-10 py-16 md:py-20 lg:grid-cols-[1.1fr_0.9fr]">
+                <div>
+                    <div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-emerald-50">
+                        <span>✔</span>
+                        <span data-translate="hero_badge">សេវាកម្មកសិកម្មកម្រិតស្តង់ដារ</span>
+                    </div>
+
+                    <h2 class="mt-6 max-w-xl text-4xl font-black leading-tight md:text-5xl xl:text-6xl" data-translate="hero_title">
+                        មានលក់ផលិតផលគុណភាពខ្ពស់ និងដោះស្រាយរាល់បញ្ហារបស់កសិករដែលកើតមាន
+                    </h2>
+
+                    <p class="mt-5 max-w-xl text-base text-emerald-50/90 md:text-lg" data-translate="hero_desc">
+                        យើងខ្ញុំមានលក់ថ្នាំជំនួយ ថ្នាំសត្វល្អិត ថ្នាំជំងឺ ថ្នាំស្មៅ និងជីគ្រាប់ ព្រមទាំងផ្តល់ប្រឹក្សាបច្ចេកទេសផ្ទាល់ពីអ្នកជំនាញដើម្បីទិន្នផលខ្ពស់។
+                    </p>
+
+                    <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+                        <a href="#consult-form" class="inline-flex items-center justify-center rounded-full bg-amber-400 px-7 py-3.5 text-base font-extrabold text-emerald-950 shadow-xl shadow-amber-600/30 transition hover:bg-amber-300">
+                            <span data-translate="cta_consult">ផ្ញើសំណួរប្រឹក្សាដំណាំ</span>
+                        </a>
+                        <a href="#products" class="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/5 px-7 py-3.5 text-base font-semibold text-white transition hover:bg-white hover:text-emerald-900">
+                            <span data-translate="cta_products">មើលផលិតផល</span>
+                        </a>
+                    </div>
+
+                    <div class="mt-8 grid max-w-lg grid-cols-3 gap-4">
+                        <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                            <div class="text-2xl font-black text-amber-300">3000+</div>
+                            <div class="mt-1 text-xs text-emerald-50/85">កសិករដែលជួយ</div>
+                        </div>
+                        <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                            <div class="text-2xl font-black text-amber-300">98%</div>
+                            <div class="mt-1 text-xs text-emerald-50/85">ការងារធានា</div>
+                        </div>
+                        <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                            <div class="text-2xl font-black text-amber-300">24/7</div>
+                            <div class="mt-1 text-xs text-emerald-50/85">ទំនាក់ទំនង</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -left-6 top-8 h-24 w-24 rounded-full bg-amber-400/30 blur-3xl"></div>
+                    <div class="absolute -right-6 bottom-8 h-32 w-32 rounded-full bg-emerald-300/30 blur-3xl"></div>
+
+                    <div class="relative overflow-hidden rounded-[32px] border border-white/10 bg-white/10 p-5 shadow-2xl shadow-emerald-950/20">
+                        <div class="rounded-[24px] bg-gradient-to-br from-emerald-50 to-amber-50 p-4 text-slate-800 shadow-soft">
+                            <div class="mb-4 flex items-center justify-between">
+                                <div>
+                                    <p class="text-xs uppercase tracking-[0.2em] text-emerald-700">Field Care</p>
+                                    <h3 class="mt-2 text-2xl font-extrabold text-emerald-900">ជម្រកដំណាំ</h3>
+                                </div>
+                                <div class="rounded-full bg-emerald-100 p-3 text-2xl">🌾</div>
+                            </div>
+
+                            <div class="rounded-2xl bg-gradient-to-br from-emerald-700 to-green-500 p-4 text-white">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <p class="text-xs uppercase tracking-[0.2em] text-emerald-100">Today</p>
+                                        <p class="mt-2 text-3xl font-black">+18%</p>
+                                    </div>
+                                    <div class="rounded-full bg-white/10 p-3 text-2xl"><img width="40" height="40" src="https://img.icons8.com/bubbles/100/economic-improvement.png" alt="economic-improvement"/></div>
+                                </div>
+                            </div>
+
+                            <div class="mt-5 space-y-3">
+                                <div class="flex items-center justify-between rounded-2xl bg-white p-3 shadow-sm">
+                                    <div class="flex items-center gap-3">
+                                        <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-100 text-xl"><img width="40" height="40" src="https://img.icons8.com/external-nawicon-flat-nawicon/64/external-fertilizer-gardening-nawicon-flat-nawicon.png" alt="external-fertilizer-gardening-nawicon-flat-nawicon"/></span>
+                                        <div>
+                                            <div class="text-sm font-bold text-slate-800">ថ្នាំជំនួយ</div>
+                                            <div class="text-[11px] text-slate-500">ទំនិញគុណភាព</div>
+                                        </div>
+                                    </div>
+                                    <span class="rounded-full bg-emerald-100 px-2 py-1 text-[10px] font-bold text-emerald-700">Hot</span>
+                                </div>
+
+                                <div class="flex items-center justify-between rounded-2xl bg-white p-3 shadow-sm">
+                                    <div class="flex items-center gap-3">
+                                        <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-100 text-xl"><img width="48" height="48" src="https://img.icons8.com/color/48/fly.png" alt="fly"/></span>
+                                        <div>
+                                            <div class="text-sm font-bold text-slate-800">ថ្នាំសត្វល្អិត</div>
+                                            <div class="text-[11px] text-slate-500">កម្ចាត់ជំងឺ</div>
+                                        </div>
+                                    </div>
+                                    <span class="rounded-full bg-amber-100 px-2 py-1 text-[10px] font-bold text-amber-700">Strong</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-16 md:py-20">
+            <div class="section-shell">
+                <div class="mx-auto max-w-3xl text-center">
+                    <p class="text-sm font-bold uppercase tracking-[0.2em] text-emerald-700">About us</p>
+                    <h3 class="mt-3 text-3xl font-black text-emerald-950 md:text-4xl">អ្នកជំនាញសម្រាប់ដំណាំ និងផលិតផលកសិកម្ម</h3>
+                    <p class="mt-4 text-base text-slate-600">យើងផ្តល់នូវដំណោះស្រាយដំណាំដ៏មានប្រសិទ្ធភាព ពីការពិនិត្យកត្តាដីរហូតដល់ការណែនាំពីរបៀបប្រើប្រាស់ថ្នាំ ធានាថាការជួសជុលមានប្រសិទ្ធភាពក្នុងពេលឆាប់ៗ។</p>
+                </div>
+
+                <div class="mt-10 grid gap-6 md:grid-cols-3">
+                    <div class="rounded-3xl border border-emerald-100 bg-white p-6 shadow-soft">
+                        <div class="inline-flex rounded-2xl bg-emerald-100 p-3 text-2xl"><img width="40" height="40" src="https://img.icons8.com/arcade/64/fine-print.png" alt="fine-print"/></div>
+                        <h4 class="mt-5 text-xl font-extrabold text-emerald-900">វិភាគបញ្ហាដែលកើតឡើង</h4>
+                        <p class="mt-3 text-sm leading-6 text-slate-600">ពិនិត្យស្ថានភាពដី ដំណាំ និងជំងឺលើរុក្ខជាតិ ដើម្បីរកឃើញមូលហេតុពិតប្រាកដ។</p>
+                    </div>
+
+                    <div class="rounded-3xl border border-amber-100 bg-white p-6 shadow-soft">
+                        <div class="inline-flex rounded-2xl bg-amber-100 p-3 text-2xl"><img width="40" height="40" src="https://img.icons8.com/external-orcas-flat-ayub-irawan/64/external-drone-irrigation-farming-orcas-(flat)-orcas-flat-ayub-irawan.png" alt="external-drone-irrigation-farming-orcas-(flat)-orcas-flat-ayub-irawan"/></div>
+                        <h4 class="mt-5 text-xl font-extrabold text-emerald-900">ព្យាបាលទាន់ពេលវេលា</h4>
+                        <p class="mt-3 text-sm leading-6 text-slate-600">ផ្តល់ផលិតផលប្រកបដោយគុណភាព និងការណែនាំការប្រើប្រាស់ដែលមានប្រសិទ្ធភាព និងសុវត្ថិភាព។</p>
+                    </div>
+
+                    <div class="rounded-3xl border border-emerald-100 bg-white p-6 shadow-soft">
+                        <div class="inline-flex rounded-2xl bg-emerald-100 p-3 text-2xl"><img width="40" height="40" src="https://img.icons8.com/external-anggara-flat-anggara-putra/32/external-profit-business-and-finance-anggara-flat-anggara-putra.png" alt="external-profit-business-and-finance-anggara-flat-anggara-putra"/></div>
+                        <h4 class="mt-5 text-xl font-extrabold text-emerald-900">ទិន្នផលខ្ពស់</h4>
+                        <p class="mt-3 text-sm leading-6 text-slate-600">ជួយបង្កើនកម្លាំងដំណាំ យកទិន្នផលខ្ពស់ និងអោយដំណាំស្ថិតស្ថេរ បង្កើនប្រាក់ចំណេញ។</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="bg-slate-900 py-16 md:py-20">
+            <div class="section-shell">
+                <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+                    <div>
+                        <p class="text-sm font-bold uppercase tracking-[0.2em] text-amber-300">Products</p>
+                        <h3 class="mt-3 text-3xl font-black text-white md:text-4xl" data-translate="prod_section_title">ផលិតផល និងសេវាកម្មជំនាញរបស់យើង</h3>
+                    </div>
+                    <p class="max-w-2xl text-slate-300" data-translate="prod_section_subtitle">ផលិតផលនាំចូលមានគុណភាពខ្ពស់ និងការធានាលើដំណោះស្រាយបញ្ហាដំណាំ</p>
+                </div>
+
+                <div class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+                    <article class="group rounded-3xl border border-slate-700 bg-slate-800 p-6 transition hover:-translate-y-1 hover:border-emerald-500 hover:shadow-xl hover:shadow-emerald-900/20">
+                        <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-500/10 text-3xl"><img width="64" height="64" src="https://img.icons8.com/external-nawicon-outline-color-nawicon/64/external-fertilizer-gardening-nawicon-outline-color-nawicon.png" alt="external-fertilizer-gardening-nawicon-outline-color-nawicon"/></div>
+                        <h4 class="text-xl font-extrabold text-white" data-translate="p1_title">ថ្នាំជំនួយ និងជីគ្រាប់</h4>
+                        <p class="mt-3 text-sm leading-6 text-slate-300" data-translate="p1_desc">ជួយពន្លឿនការលូតលាស់ បង្កើនឬស ដើម រឹងមាំ និងបង្កើនទិន្នផលគ្រាប់ និងផ្លែផ្កា។</p>
+                    </article>
+
+                    <article class="group rounded-3xl border border-slate-700 bg-slate-800 p-6 transition hover:-translate-y-1 hover:border-emerald-500 hover:shadow-xl hover:shadow-emerald-900/20">
+                        <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-500/10 text-3xl"><img width="100" height="100" src="https://img.icons8.com/plasticine/100/insect.png" alt="insect"/></div>
+                        <h4 class="text-xl font-extrabold text-white" data-translate="p2_title">ថ្នាំសត្វល្អិត</h4>
+                        <p class="mt-3 text-sm leading-6 text-slate-300" data-translate="p2_desc">កម្ចាត់សត្វល្អិតចង្រៃគ្រប់ប្រភេទបានរហ័ស និងមានប្រសិទ្ធភាពខ្ពស់លើដំណាំគ្រប់ប្រភេទ។</p>
+                    </article>
+
+                    <article class="group rounded-3xl border border-slate-700 bg-slate-800 p-6 transition hover:-translate-y-1 hover:border-emerald-500 hover:shadow-xl hover:shadow-emerald-900/20">
+                        <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-red-500/10 text-3xl">🛡️</div>
+                        <h4 class="text-xl font-extrabold text-white" data-translate="p3_title">ថ្នាំជំងឺដំណាំ</h4>
+                        <p class="mt-3 text-sm leading-6 text-slate-300" data-translate="p3_desc">ព្យាបាល និងការពារជំងឺផ្សិត បាក់តេរី និងមេរោគផ្សេងៗលើស្លឹក ដើម និងឫស។</p>
+                    </article>
+
+                    <article class="group rounded-3xl border border-slate-700 bg-slate-800 p-6 transition hover:-translate-y-1 hover:border-emerald-500 hover:shadow-xl hover:shadow-emerald-900/20">
+                        <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-lime-500/10 text-3xl">🌿</div>
+                        <h4 class="text-xl font-extrabold text-white" data-translate="p4_title">ថ្នាំស្មៅ</h4>
+                        <p class="mt-3 text-sm leading-6 text-slate-300" data-translate="p4_desc">កម្ចាត់ស្មៅចង្រៃគ្រប់ប្រភេទ សម្លាប់ដល់ឬស មិនប៉ះពាល់ដល់ដំណាំចម្បង។</p>
+                    </article>
+                   
+                </div>
+
+                <div class="mt-8 rounded-[32px] border border-emerald-700/50 bg-gradient-to-r from-emerald-900 to-emerald-800 p-7 shadow-2xl shadow-emerald-900/25">
+                    <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+                        <div class="max-w-2xl">
+                            <p class="text-sm font-bold uppercase tracking-[0.2em] text-amber-300">Technical Support</p>
+                            <h4 class="mt-3 text-2xl font-black text-white md:text-3xl" data-translate="p5_title">សេវាបច្ចេកទេស និងដោះស្រាយបញ្ហាដំណាំ</h4>
+                            <p class="mt-3 text-sm leading-6 text-emerald-50/90" data-translate="p5_desc">ប្រឹក្សាយោបល់ផ្ទាល់ពីអ្នកបច្ចេកទេសកសិកម្មដែលមានបទពិសោធន៍ ត្រួតពិនិត្យ និងផ្តល់វេជ្ជបញ្ជាដោះស្រាយគ្រប់បញ្ហាដំណាំនៅទូទាំងប្រទេសកម្ពុជា។</p>
+                        </div>
+                        <a href="#consult-form" class="inline-flex items-center justify-center rounded-full bg-amber-400 px-6 py-3 text-sm font-extrabold text-emerald-950 transition hover:bg-amber-300">📞 ទាក់ទងឥឡូវនេះ</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-us" class="py-16 md:py-20">
+            <div class="section-shell">
+                <div class="mx-auto max-w-3xl text-center">
+                    <p class="text-sm font-bold uppercase tracking-[0.2em] text-emerald-700">Why choose us</p>
+                    <h3 class="mt-3 text-3xl font-black text-emerald-950 md:text-4xl">សេវា និងការគាំទ្រ ដោយចំណូលចិត្តកសិករ</h3>
+                </div>
+
+                <div class="mt-10 grid gap-6 md:grid-cols-3">
+                    <div class="rounded-3xl bg-white p-6 shadow-soft">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-100 text-2xl"><img width="100" height="100" src="https://img.icons8.com/plasticine/100/warranty.png" alt="warranty"/></div>
+                        <h4 class="mt-5 text-xl font-extrabold text-emerald-900">ស្តង់ដារ</h4>
+                        <p class="mt-3 text-sm leading-6 text-slate-600">ផលិតផលបានជ្រើសរើស និងធានាថាមានស្តង់ដារច្បាស់លាស់ ត្រឹមត្រូវ និងមានប្រសិទ្ធភាព។</p>
+                    </div>
+
+                    <div class="rounded-3xl bg-white p-6 shadow-soft">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-100 text-2xl"><img width="100" height="100" src="https://img.icons8.com/bubbles/100/in-transit.png" alt="in-transit"/></div>
+                        <h4 class="mt-5 text-xl font-extrabold text-emerald-900">ដឹកជញ្ជូនរហ័ស</h4>
+                        <p class="mt-3 text-sm leading-6 text-slate-600">ដឹកជញ្ជូនទៅកាន់កសិករ និងចម្ការខាងក្នុងតាមផែនទី និងក្នុងតំបន់ជុំវិញ។</p>
+                    </div>
+
+                    <div class="rounded-3xl bg-white p-6 shadow-soft">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-green-100 text-2xl"><img width="50" height="50" src="https://img.icons8.com/external-ddara-flat-ddara/64/external-farmer-professions-ddara-flat-ddara.png" alt="external-farmer-professions-ddara-flat-ddara"/></div>
+                        <h4 class="mt-5 text-xl font-extrabold text-emerald-900">ប្រឹក្សាបច្ចេកទេស</h4
+                        <p class="mt-3 text-sm leading-6 text-slate-600">អ្នកជំនាញផ្តល់ការណែនាំរៀបរាប់ជាក់លាក់ កែបញ្ហាច្បាស់លាស់ និងគាំទ្រតាមកម្រិត។</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="consult-form" class="bg-gradient-to-br from-emerald-950 to-emerald-900 px-4 py-16 text-white md:py-20">
+            <div class="section-shell">
+                <div class="mx-auto max-w-5xl rounded-[32px] border border-emerald-700/50 bg-white/5 p-6 shadow-2xl shadow-emerald-950/30 md:p-8">
+                    <div class="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+                        <div class="rounded-[28px] bg-gradient-to-br from-emerald-800 to-emerald-700 p-7">
+                            <p class="text-sm font-bold uppercase tracking-[0.2em] text-amber-300">Consultation</p>
+                            <h3 class="mt-3 text-3xl font-black text-white" data-translate="form_title">ផ្ញើសំណួរ ឬបញ្ហាដំណាំរបស់អ្នកមកយើងខ្ញុំ</h3>
+                            <p class="mt-4 text-sm leading-6 text-emerald-50/90" data-translate="form_subtitle">បំពេញព័ត៌មានខាងក្រោម អ្នកបច្ចេកទេសនឹងទាក់ទងត្រឡប់ទៅវិញយ៉ាងលឿនបំផុត។</p>
+
+                            <div class="mt-8 space-y-4">
+                                <div class="flex items-center gap-3 rounded-2xl bg-white/5 p-3">
+                                    <span class="text-xl">📞</span>
+                                    <div>
+                                        <div class="text-xs uppercase tracking-[0.18em] text-emerald-100">Hotline</div>
+                                        <div class="mt-1 text-base font-bold text-white">097 433 7888</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-3 rounded-2xl bg-white/5 p-3">
+                                    <span class="text-xl">📍</span>
+                                    <div>
+                                        <div class="text-xs uppercase tracking-[0.18em] text-emerald-100">Location</div>
+                                        <div class="mt-1 text-sm text-white">ភូមិថ្នល់បែកកើត, ស្រុកចំការលើ</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form onsubmit="handleFormSubmit(event)" class="rounded-[28px] bg-slate-950/30 p-6 md:p-7">
+                            <div class="grid gap-5 md:grid-cols-2">
+                                <div>
+                                    <label class="mb-2 block text-sm font-medium text-emerald-100" data-translate="lbl_name">ឈ្មោះរបស់អ្នក៖</label>
+                                    <input id="client-name" type="text" required class="w-full rounded-2xl border border-emerald-700/60 bg-emerald-950/40 px-4 py-3 text-white placeholder:text-emerald-100/40 focus:border-amber-400 focus:outline-none" placeholder="ឧ. ចាន់ ធារ៉ា" />
+                                </div>
+                                <div>
+                                    <label class="mb-2 block text-sm font-medium text-emerald-100" data-translate="lbl_phone">លេខទូរស័ព្ទ (សម្រាប់ទំនាក់ទំនង)៖</label>
+                                    <input id="client-phone" type="tel" required class="w-full rounded-2xl border border-emerald-700/60 bg-emerald-950/40 px-4 py-3 text-white placeholder:text-emerald-100/40 focus:border-amber-400 focus:outline-none" placeholder="ឧ. 097 433 7888" />
+                                </div>
+                            </div>
+
+                            <div class="mt-5">
+                                <label class="mb-2 block text-sm font-medium text-emerald-100" data-translate="lbl_crop">ប្រភេទដំណាំ៖</label>
+                                <input id="client-crop" type="text" required class="w-full rounded-2xl border border-emerald-700/60 bg-emerald-950/40 px-4 py-3 text-white placeholder:text-emerald-100/40 focus:border-amber-400 focus:outline-none" placeholder="ឧ. ស្វាយចន្ទី, ម្រេច, ស្រូវ, ដំឡូងមី..." />
+                            </div>
+
+                            <div class="mt-5">
+                                <label class="mb-2 block text-sm font-medium text-emerald-100" data-translate="lbl_issue">រៀបរាប់ពីបញ្ហាដំណាំ ឬថ្នាំដែលចង់បាន៖</label>
+                                <textarea id="client-issue" rows="5" required class="w-full rounded-2xl border border-emerald-700/60 bg-emerald-950/40 px-4 py-3 text-white placeholder:text-emerald-100/40 focus:border-amber-400 focus:outline-none" placeholder="ឧ. ស្លឹកខាន់ម្លប់ និងមានដង្កូវស៊ី..."></textarea>
+                            </div>
+
+                            <button type="submit" class="mt-6 inline-flex w-full items-center justify-center rounded-2xl bg-amber-400 px-6 py-3.5 text-base font-extrabold text-emerald-950 shadow-xl shadow-amber-500/20 transition hover:bg-amber-300" data-translate="form_submit_btn">
+                                🚀 បញ្ជូនព័ត៌មានទៅអ្នកបច្ចេកទេស
+                            </button>
+
+                            <div id="form-success" class="mt-5 hidden rounded-2xl border border-emerald-500/40 bg-emerald-600/20 p-4 text-sm font-medium text-emerald-50" data-translate="form_success_msg">
+                                ✅ អរគុណ! ព័ត៌មានរបស់អ្នកត្រូវបានបញ្ជូនហើយ អ្នកបច្ចេកទេសនឹងទំនាក់ទំនងមកកាន់លោកអ្នកឆាប់ៗនេះ។
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews" class="py-16 md:py-20">
+            <div class="section-shell">
+                <div class="mx-auto max-w-3xl text-center">
+                    <p class="text-sm font-bold uppercase tracking-[0.2em] text-emerald-700">Testimonials</p>
+                    <h3 class="mt-3 text-3xl font-black text-emerald-950 md:text-4xl" data-translate="testi_title">មតិយោបល់ពីកសិករដែលបានប្រើប្រាស់សេវា</h3>
+                </div>
+
+                <div class="mt-10 grid gap-6 md:grid-cols-2">
+                    <article class="rounded-[28px] border border-amber-100 bg-white p-6 shadow-soft">
+                        <div class="mb-4 flex items-center gap-2 text-amber-400">★★★★★</div>
+                        <p class="text-base leading-7 text-slate-700" data-translate="t1_text">"ពីមុនដំណាំខ្ញុំខូចខាតច្រើនដោយសារជំងឺស្លឹកខាន់ម្លប់ តែពេលបានមកប្រឹក្សា និងទិញថ្នាំពី ស្រែមាស ចំការលើ ឥឡូវជាសះស្បើយ និងទទួលបានផលផ្លែផ្កាច្រើនគួរឱ្យកត់សម្គាល់។"</p>
+                        <div class="mt-5 border-t border-slate-200 pt-4">
+                            <p class="font-extrabold text-emerald-900" data-translate="t1_author">- បង កសិករ មកពី ស្រុកចំការលើ</p>
+                        </div>
+                    </article>
+
+                    <article class="rounded-[28px] border border-emerald-100 bg-white p-6 shadow-soft">
+                        <div class="mb-4 flex items-center gap-2 text-amber-400">★★★★★</div>
+                        <p class="text-base leading-7 text-slate-700" data-translate="t2_text">"អ្នកបច្ចេកទេសពូកែណាស់ ណែនាំចំបញ្ហា មិនសាំញ៉ាំ ថ្នាំពូកែមានប្រសិទ្ធភាពខ្ពស់ និងតម្លៃសមរម្យ។ ណែនាំបងប្អូនកសិករមកទីនេះចុះ!"</p>
+                        <div class="mt-5 border-t border-slate-200 pt-4">
+                            <p class="font-extrabold text-emerald-900" data-translate="t2_author">- បង ម្ចាស់ចម្ការ នៅខេត្តកំពង់ចាម</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-emerald-50 py-16 md:py-20">
+            <div class="section-shell">
+                <div class="mx-auto max-w-3xl text-center">
+                    <p class="text-sm font-bold uppercase tracking-[0.2em] text-emerald-700">FAQ</p>
+                    <h3 class="mt-3 text-3xl font-black text-emerald-950 md:text-4xl" data-translate="faq_title">សំណួរដែលតែងសួរញឹកញាប់ (FAQ)</h3>
+                </div>
+
+                <div class="mt-10 space-y-4">
+                    <div class="rounded-3xl bg-white p-5 shadow-soft md:p-6">
+                        <h4 class="text-lg font-extrabold text-emerald-900" data-translate="faq1_q">❓ តើធ្វើម៉េចទើបដឹងថាដំណាំខ្ញុំត្រូវប្រើថ្នាំអ្វី?</h4>
+                        <p class="mt-2 text-sm leading-6 text-slate-600" data-translate="faq1_a">បងប្អូនអាចថតរូបស្លឹក ដើម ឬឫសដំណាំដែលមានបញ្ហា រួចផ្ញើមកកាន់ Telegram ផ្ទាល់ខ្លួន ឬបំពេញទម្រង់ប្រឹក្សាខាងលើ យើងខ្ញុំនឹងជួយវិភាគ និងផ្តល់វេជ្ជបញ្ជាជូនភ្លាមៗ។</p>
+                    </div>
+
+                    <div class="rounded-3xl bg-white p-5 shadow-soft md:p-6">
+                        <h4 class="text-lg font-extrabold text-emerald-900" data-translate="faq2_q">❓ តើមានសេវាដឹកជញ្ជូនដល់ចម្ការដែរឬទេ?</h4>
+                        <p class="mt-2 text-sm leading-6 text-slate-600" data-translate="faq2_a">បាទ/ចាស! យើងខ្ញុំមានសេវាដឹកជញ្ជូនរហ័ស ទាំងក្នុងស្រុកចំការលើ ខេត្តកំពង់ចាម និងផ្ញើជូនកសិករនៅទូទាំងប្រទេសកម្ពុជា។</p>
+                    </div>
+
+                    <div class="rounded-3xl bg-white p-5 shadow-soft md:p-6">
+                        <h4 class="text-lg font-extrabold text-emerald-900" data-translate="faq3_q">❓ តើថ្នាំ និងជីគ្រាប់មានការធានាគុណភាពដែរទេ?</h4>
+                        <p class="mt-2 text-sm leading-6 text-slate-600" data-translate="faq3_a">ផលិតផលទាំងអស់គឺជាទំនិញនាំចូលមានស្តង់ដារច្បាស់លាស់ ត្រួតពិនិត្យ និងធានាប្រសិទ្ធភាពខ្ពស់ដោយអ្នកបច្ចេកទេសផ្ទាល់។</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-emerald-950 py-16 text-white md:py-20">
+            <div class="section-shell">
+                <div class="mx-auto max-w-4xl rounded-[32px] border border-emerald-800 bg-white/5 p-7 shadow-2xl shadow-emerald-950/20 md:p-10">
+                    <div class="text-center">
+                        <p class="text-sm font-bold uppercase tracking-[0.2em] text-amber-300">Contact</p>
+                        <h3 class="mt-3 text-3xl font-black text-white md:text-4xl" data-translate="contact_title">ទំនាក់ទំនងមកយើងខ្ញុំឥឡូវនេះ</h3>
+                        <p class="mt-4 text-base text-emerald-100/80" data-translate="contact_subtitle">យើងខ្ញុំរីករាយស្វាគមន៍ និងផ្តល់ប្រឹក្សាជូនបងប្អូនកសិករគ្រប់ពេលវេលា។</p>
+                    </div>
+
+                    <div class="mt-8 grid gap-6 md:grid-cols-2">
+                        <div class="rounded-3xl border border-emerald-700/40 bg-emerald-900/40 p-6">
+                            <div class="flex items-start gap-4">
+                                <span class="text-2xl">📍</span>
+                                <div>
+                                    <p class="text-xs uppercase tracking-[0.2em] text-emerald-200">Location</p>
+                                    <p class="mt-2 text-base font-semibold text-white" data-translate="loc_value">ភូមិថ្នល់បែកកើត, ឃុំស្វាយទាប, ស្រុកចំការលើ, ខេត្តកំពង់ចាម</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rounded-3xl border border-emerald-700/40 bg-emerald-900/40 p-6">
+                            <div class="flex items-start gap-4">
+                                <span class="text-2xl">📞</span>
+                                <div>
+                                    <p class="text-xs uppercase tracking-[0.2em] text-emerald-200">Call</p>
+                                    <a href="tel:0974337888" class="mt-2 inline-block text-2xl font-black text-amber-300">097 433 7888</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+                        <a href="tel:0974337888" class="inline-flex items-center justify-center rounded-full bg-amber-400 px-7 py-3.5 text-base font-extrabold text-emerald-950 transition hover:bg-amber-300"><img width="30" height="30" src="https://img.icons8.com/parakeet/48/incoming-call.png" alt="incoming-call"/> ហៅទូរស័ព្ទឥឡូវនេះ</a>
+                        <a href="https://t.me/phallakhum" target="_blank" class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-7 py-3.5 text-base font-semibold text-white transition hover:bg-white hover:text-emerald-900"><img width="35" height="35" src="https://img.icons8.com/color/48/telegram-app--v1.png" alt="telegram-app--v1"/> Chat on Telegram</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+        <a href="https://t.me/phallakhum" target="_blank" class="float-anim flex h-14 w-14 items-center justify-center rounded-full bg-sky-500 text-2xl text-white shadow-2xl shadow-sky-600/30 transition hover:scale-105" title="Chat via Telegram">
+            <svg class="h-7 w-7 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.14-.26.26-.534.26l.213-3.053 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.654-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.94z"/>
+            </svg>
+        </a>
+        <a href="tel:0974337888" class="float-anim flex h-14 w-14 items-center justify-center rounded-full bg-amber-400 text-2xl text-emerald-950 shadow-2xl shadow-amber-500/40 transition hover:scale-105" title="Call 0974337888">
+            📞
+        </a>
+    </div>
+
+    <footer class="bg-emerald-950 py-6 text-center text-sm text-emerald-200">
+        <p data-translate="footer_text">&copy; 2026 ស្រែមាស ចំការលើ. All rights reserved. Agricultural Technical & Supply Center.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            km: {
+                top_promo: "ប្រឹក្សាបច្ចេកទេសដំណាំដោយឥតគិតថ្លៃ! ទំនាក់ទំនងបន្ទាន់៖ 097 433 7888",
+                brand_name: "ស្រែមាស ចំការលើ",
+                brand_sub: "Agricultural Expert & Supplier",
+                hero_badge: "សេវាកម្មកសិកម្មកម្រិតស្តង់ដារ",
+                hero_title: "មានលក់ផលិតផលគុណភាពខ្ពស់ និងដោះស្រាយរាល់បញ្ហារបស់កសិករដែលកើតមាន",
+                hero_desc: "យើងខ្ញុំមានលក់ថ្នាំជំនួយ ថ្នាំសត្វល្អិត ថ្នាំជំងឺ ថ្នាំស្មៅ និងជីគ្រាប់ ព្រមទាំងផ្តល់ប្រឹក្សាបច្ចេកទេសផ្ទាល់ពីអ្នកជំនាញដើម្បីទិន្នផលខ្ពស់។",
+                cta_consult: "ផ្ញើសំណួរប្រឹក្សាដំណាំ",
+                cta_products: "មើលផលិតផល",
+                prod_section_title: "ផលិតផល និងសេវាកម្មជំនាញរបស់យើង",
+                prod_section_subtitle: "ផលិតផលនាំចូលមានគុណភាពខ្ពស់ និងការធានាលើដំណោះស្រាយបញ្ហាដំណាំ",
+                p1_title: "ថ្នាំជំនួយ និងជីគ្រាប់",
+                p1_desc: "ជួយពន្លឿនការលូតលាស់ បង្កើនឬស ដើម រឹងមាំ និងបង្កើនទិន្នផលគ្រាប់ និងផ្លែផ្កា។",
+                p2_title: "ថ្នាំសត្វល្អិត",
+                p2_desc: "កម្ចាត់សត្វល្អិតចង្រៃគ្រប់ប្រភេទបានរហ័ស និងមានប្រសិទ្ធភាពខ្ពស់លើដំណាំគ្រប់ប្រភេទ។",
+                p3_title: "ថ្នាំជំងឺដំណាំ",
+                p3_desc: "ព្យាបាល និងការពារជំងឺផ្សិត បាក់តេរី និងមេរោគផ្សេងៗលើស្លឹក ដើម និងឫស។",
+                p4_title: "ថ្នាំស្មៅ",
+                p4_desc: "កម្ចាត់ស្មៅចង្រៃគ្រប់ប្រភេទ សម្លាប់ដល់ឬស មិនប៉ះពាល់ដល់ដំណាំចម្បង។",
+                p5_title: "សេវាបច្ចេកទេស និងដោះស្រាយបញ្ហាដំណាំ",
+                p5_desc: "ប្រឹក្សាយោបល់ផ្ទាល់ពីអ្នកបច្ចេកទេសកសិកម្មដែលមានបទពិសោធន៍ ត្រួតពិនិត្យ និងផ្តល់វេជ្ជបញ្ជាដោះស្រាយគ្រប់បញ្ហាដំណាំនៅទូទាំងប្រទេសកម្ពុជា។",
+                form_title: "ផ្ញើសំណួរ ឬបញ្ហាដំណាំរបស់អ្នកមកយើងខ្ញុំ",
+                form_subtitle: "បំពេញព័ត៌មានខាងក្រោម អ្នកបច្ចេកទេសនឹងទាក់ទងត្រឡប់ទៅវិញយ៉ាងលឿនបំផុត។",
+                lbl_name: "ឈ្មោះរបស់អ្នក៖",
+                lbl_phone: "លេខទូរស័ព្ទ (សម្រាប់ទំនាក់ទំនង)៖",
+                lbl_crop: "ប្រភេទដំណាំ៖",
+                lbl_issue: "រៀបរាប់ពីបញ្ហាដំណាំ ឬថ្នាំដែលចង់បាន៖",
+                form_submit_btn: " បញ្ជូនព័ត៌មានទៅអ្នកបច្ចេកទេស",
+                form_success_msg: "✅ អរគុណ! ព័ត៌មានរបស់អ្នកត្រូវបានបញ្ជូនហើយ អ្នកបច្ចេកទេសនឹងទំនាក់ទំនងមកកាន់លោកអ្នកឆាប់ៗនេះ។",
+                testi_title: "មតិយោបល់ពីកសិករដែលបានប្រើប្រាស់សេវា",
+                t1_text: "ពីមុនដំណាំខ្ញុំខូចខាតច្រើនដោយសារជំងឺស្លឹកខាន់ម្លប់ តែពេលបានមកប្រឹក្សា និងទិញថ្នាំពី ស្រែមាស ចំការលើ ឥឡូវជាសះស្បើយ និងទទួលបានផលផ្លែផ្កាច្រើនគួរឱ្យកត់សម្គាល់។",
+                t1_author: "- បង កសិករ មកពី ស្រុកចំការលើ",
+                t2_text: "អ្នកបច្ចេកទេសពូកែណាស់ ណែនាំចំបញ្ហា មិនសាំញ៉ាំ ថ្នាំពូកែមានប្រសិទ្ធភាពខ្ពស់ និងតម្លៃសមរម្យ។ ណែនាំបងប្អូនកសិករមកទីនេះចុះ!",
+                t2_author: "- បង ម្ចាស់ចម្ការ នៅខេត្តកំពង់ចាម",
+                faq_title: "សំណួរដែលតែងសួរញឹកញាប់ (FAQ)",
+                faq1_q: "❓ តើធ្វើម៉េចទើបដឹងថាដំណាំខ្ញុំត្រូវប្រើថ្នាំអ្វី?",
+                faq1_a: "បងប្អូនអាចថតរូបស្លឹក ដើម ឬឫសដំណាំដែលមានបញ្ហា រួចផ្ញើមកកាន់ Telegram ផ្ទាល់ខ្លួន ឬបំពេញទម្រង់ប្រឹក្សាខាងលើ យើងខ្ញុំនឹងជួយវិភាគ និងផ្តល់វេជ្ជបញ្ជាជូនភ្លាមៗ។",
+                faq2_q: "❓ តើមានសេវាដឹកជញ្ជូនដល់ចម្ការដែរឬទេ?",
+                faq2_a: "បាទ/ចាស! យើងខ្ញុំមានសេវាដឹកជញ្ជូនរហ័ស ទាំងក្នុងស្រុកចំការលើ ខេត្តកំពង់ចាម និងផ្ញើជូនកសិករនៅទូទាំងប្រទេសកម្ពុជា។",
+                faq3_q: "❓ តើថ្នាំ និងជីគ្រាប់មានការធានាគុណភាពដែរទេ?",
+                faq3_a: "ផលិតផលទាំងអស់គឺជាទំនិញនាំចូលមានស្តង់ដារច្បាស់លាស់ ត្រួតពិនិត្យ និងធានាប្រសិទ្ធភាពខ្ពស់ដោយអ្នកបច្ចេកទេសផ្ទាល់។",
+                contact_title: "ទំនាក់ទំនងមកយើងខ្ញុំឥឡូវនេះ",
+                contact_subtitle: "យើងខ្ញុំរីករាយស្វាគមន៍ និងផ្តល់ប្រឹក្សាជូនបងប្អូនកសិករគ្រប់ពេលវេលា។",
+                loc_value: "ភូមិថ្នល់បែកកើត, ឃុំស្វាយទាប, ស្រុកចំការលើ, ខេត្តកំពង់ចាម",
+                footer_text: "© 2026 ស្រែមាស ចំការលើ។ រក្សាសិទ្ធិគ្រប់យ៉ាង។"
+            },
+            en: {
+                top_promo: "Free Crop Technical Consultation! Urgent Contact: 097 433 7888",
+                brand_name: "Sre Meas Chamkar Leu",
+                brand_sub: "Agricultural Expert & Supplier",
+                hero_badge: "Standard Agricultural Services",
+                hero_title: "Crop Problem Solutions & High-Quality Agricultural Products",
+                hero_desc: "We supply growth promoters, insecticides, fungicides, herbicides, and granular fertilizers, along with direct expert technical advice for high yields.",
+                cta_consult: "Send Consultation",
+                cta_products: "View Products",
+                prod_section_title: "Our Professional Products & Services",
+                prod_section_subtitle: "High-quality imported products with guaranteed solutions for crop problems",
+                p1_title: "Growth Promoters & Granular Fertilizers",
+                p1_desc: "Accelerates growth, strengthens roots and stems, and maximizes crop and fruit yield.",
+                p2_title: "Insecticides",
+                p2_desc: "Fast and highly effective control against all types of destructive pests for all crops.",
+                p3_title: "Fungicides & Disease Control",
+                p3_desc: "Treats and prevents fungal, bacterial, and viral infections on leaves, stems, and roots.",
+                p4_title: "Herbicides",
+                p4_desc: "Effectively eradicates all types of weeds down to the roots without harming main crops.",
+                p5_title: "Technical Services & Crop Problem Solving",
+                p5_desc: "Direct consultation from experienced agricultural technicians, inspecting and prescribing solutions for crop issues across Cambodia.",
+                form_title: "Send Us Your Crop Questions or Issues",
+                form_subtitle: "Fill out the information below, and our technician will contact you shortly.",
+                lbl_name: "Your Name:",
+                lbl_phone: "Phone Number (for contact):",
+                lbl_crop: "Crop Type:",
+                lbl_issue: "Describe your crop problem or desired medicine:",
+                form_submit_btn: " Submit to Technician",
+                form_success_msg: "✅ Thank you! Your information has been submitted. Our technician will contact you soon.",
+                testi_title: "Farmer Testimonials",
+                t1_text: "Previously my crops suffered heavily from leaf diseases, but after consulting and buying medicine from Sre Meas Chamkar Leu, they recovered remarkably with high yields.",
+                t1_author: "- Farmer from Chamkar Leu District",
+                t2_text: "The technician is very professional, hits the exact problem without complexity, and the products are highly effective at a fair price. Highly recommended!",
+                t2_author: "- Farm Owner in Kampong Cham Province",
+                faq_title: "Frequently Asked Questions (FAQ)",
+                faq1_q: "❓ How do I know what medicine my crop needs?",
+                faq1_a: "You can take a photo of the affected leaves, stems, or roots and send it via Telegram or fill out the consultation form above. We will analyze and prescribe a solution immediately.",
+                faq2_q: "❓ Do you offer delivery services to the farm?",
+                faq2_a: "Yes! We offer fast delivery services both within Chamkar Leu District, Kampong Cham, and shipping to farmers across Cambodia.",
+                faq3_q: "❓ Are the chemicals and fertilizers guaranteed?",
+                faq3_a: "All products are standard imported goods, inspected, and guaranteed for high efficiency directly by our expert technician.",
+                contact_title: "Contact Us Today",
+                contact_subtitle: "We are always happy to welcome and advise farmers at any time.",
+                loc_value: "Thnal Baek Kaeut Village, Svay Teab Commune, Chamkar Leu District, Kampong Cham Province",
+                footer_text: "© 2026 Sre Meas Chamkar Leu. All rights reserved. Agricultural Technical & Supply Center."
+            }
+        };
+
+        function switchLanguage(lang) {
+            if (lang === 'km') {
+                document.getElementById('btn-km').className = 'px-3 py-2 text-sm rounded-full bg-white text-emerald-900 font-semibold shadow-sm transition';
+                document.getElementById('btn-en').className = 'px-3 py-2 text-sm rounded-full text-emerald-100 hover:text-white transition';
+                document.documentElement.lang = 'km';
+            } else {
+                document.getElementById('btn-en').className = 'px-3 py-2 text-sm rounded-full bg-white text-emerald-900 font-semibold shadow-sm transition';
+                document.getElementById('btn-km').className = 'px-3 py-2 text-sm rounded-full text-emerald-100 hover:text-white transition';
+                document.documentElement.lang = 'en';
+            }
+
+            const elements = document.querySelectorAll('[data-translate]');
+            elements.forEach((el) => {
+                const key = el.getAttribute('data-translate');
+                if (translations[lang] && translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('client-name').value;
+            const phone = document.getElementById('client-phone').value;
+            const crop = document.getElementById('client-crop').value;
+            const issue = document.getElementById('client-issue').value;
+
+            document.getElementById('form-success').classList.remove('hidden');
+            const telegramUrl = `https://t.me/0974337888?text=${encodeURIComponent('សួស្តី! ខ្ញុំឈ្មោះ ' + name + ', លេខទូរស័ព្ទ ' + phone + ', ដំណាំ ' + crop + ', បញ្ហា: ' + issue)}`;
+
+            setTimeout(() => {
+                window.open(telegramUrl, '_blank');
+            }, 1200);
+        }
+
+        window.onload = function () {
+            switchLanguage('km');
+        };
+    </script>
+</body>
+</html>
